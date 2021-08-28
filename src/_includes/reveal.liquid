@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>{{ slides.title }}</title>
+    <meta name="description" content="{{ slides.description }}">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window
+        .location
+        .search
+        .match(/print-pdf/gi)
+          ? 'css/print/pdf.css'
+          : 'css/print/paper.css';
+      document
+        .getElementsByTagName('head')[0]
+        .appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        {% for slide in collections.slides %}
+          {% include _section %}
+        {% endfor %}
+      </div>
+
+      <footer class="colophon">
+        <div class="colophon__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -200 3848 1800" focusable="false" aria-label="Front Range Front-End">
+            <g fill-rule="evenodd">
+              <path fill="#60569C" d="M1735.64 0L507.27 1750.66h174.1L1803.34 154.74h19.35l1121.96 1595.93h174.1L1890.36 0h-154.72z"></path>
+              <path fill="#60569C" d="M1881.3 947.64L2209.45 441H2034.9L1817 788.83h-5.25l-217.88-347.8H1419.3l328.14 506.63h133.87z"></path>
+              <path fill="#5C6443" d="M2753.76 467.26l-947.5 1361.57h179.06l835.6-1201.16h14.9l835.6 1201.16h179.06l-947.5-1361.57h-149.22z"></path>
+              <path fill="#2C313E" d="M600.2 925.04L41.05 1749.4h174.6l448.62-665.22h8.83l448.66 665.2h174.57L737.2 925.05h-137z"></path>
+            </g>
+          </svg>
+        </div>
+
+        <a href="https://jdsteinbach.com/mobile-forms/#/" class="colophon__link">jds.li/mobile-forms</a>
+      </footer>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        height: 600,
+        width: 1200,
+        hash: true,
+        dependencies: [
+          {
+            src: 'plugin/notes/notes.js',
+            async: true
+          }
+        ],
+        transition: 'fade'
+      });
+    </script>
+  </body>
+</html>

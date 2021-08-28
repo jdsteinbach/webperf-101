@@ -1,0 +1,25 @@
+.keyboards,
+.dates {
+  display: grid;
+  grid-template-columns: auto repeat(2, 20rem);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  > p {
+    margin: 0;
+    width: auto;
+  }
+
+  img {
+    margin: 0;
+    border: 0;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.dates {
+  grid-template-columns: repeat(3, 1fr);
+}

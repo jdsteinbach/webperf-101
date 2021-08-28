@@ -1,0 +1,42 @@
+.colophon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 15vw;
+  }
+}
+
+.colophon__logo {
+  width: 15vw;
+
+  svg {
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+}
+
+.colophon__link {
+  padding: .4em 1em .6em;
+  opacity: .75;
+  font-family: $codeFont;
+  font-style: italic;
+  font-size: (1em / 1.5);
+  background-color: $backgroundColor;
+
+  @supports (font-variation-settings: initial) {
+    --slnt: -12;
+    --MONO: 1;
+
+    font-style: normal;
+  }
+}
