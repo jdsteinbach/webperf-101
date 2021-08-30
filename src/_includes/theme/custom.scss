@@ -123,13 +123,11 @@ section.has-light-background {
       display: block;
       font-family: $headingFont;
       font-size: 1.6em;
-      border-bottom: .15em solid currentColor;
     }
 
     h1, h2, h3, h4, h5, h6 {
       em {
         font-style: italic;
-        border-bottom: .125em solid currentColor;
 
         @supports (font-variation-settings: initial) {
           --CRSV: 1;
