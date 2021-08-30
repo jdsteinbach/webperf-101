@@ -38,25 +38,257 @@
 
         
           <section >
-  <p><em>By solving a11y issues at the<br>
-semantic level, we…</em></p>
+  <h2>Expectations</h2>
 <ul>
-<li><span aria-hidden="true">✓ </span>improve UIs for existing technology</li>
-<li><span aria-hidden="true">✓ </span>future-proof them for years to come</li>
+<li>Understand the lingo</li>
+<li>Have a short list of good resources to refer back to</li>
+<li>Set research goals for your use cases</li>
 </ul>
 
 </section>
 
         
           <section >
-  <h2>Resources</h2>
+  <h2>What Is <em>Web Performance?</em></h2>
+
+</section>
+
+        
+          <section >
+  <blockquote>
+<p>Make it fast.</p>
+</blockquote>
+
+</section>
+
+        
+          <section >
+  <blockquote>
+<p>Make it frictionless.</p>
+</blockquote>
+
+</section>
+
+        
+          <section >
+  <blockquote>
+<p>Make it accessible.</p>
+</blockquote>
 <ul>
-<li><a href="https://css-tricks.com/better-form-inputs-for-better-mobile-user-experiences/">CSS Tricks</a></li>
-<li><a href="https://adamsilver.io/articles/form-design-from-zero-to-hero-all-in-one-blog-post/">Adam Silver</a>, <a href="https://twitter.com/thearslankhalid/status/1302143480693743616?s=20">Arslan Khalid</a>, <a href="https://gerireid.com/forms.html">Geri Reid</a></li>
-<li><a href="https://codepen.io/collection/AagvdL">CodePen Examples</a></li>
-<li><a href="https://better-mobile-inputs.netlify.app">Input Builder</a></li>
-<li><a href="https://inputmodes.com/"><code>inputmode</code> Tester</a></li>
+<li>Accessibility is not “just screen readers”</li>
+<li>Bigger file sizes are a barrier to access</li>
+<li>“www” does not stand for “<a href="https://vimeo.com/194968584">wealthy Western web</a>”</li>
 </ul>
+
+</section>
+
+        
+          <section >
+  <h3>Scope</h3>
+<ul>
+<li>JS</li>
+<li>Images</li>
+<li>CSS</li>
+<li>(Server settings)</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h2>Measuring</h2>
+
+</section>
+
+        
+          <section >
+  <h3>Metrics</h3>
+<ul>
+<li>Page load time</li>
+<li>Render time</li>
+<li>Speed index</li>
+<li>Total bytes</li>
+<li>First meaningful/contentful paint</li>
+<li>Layout shift</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>Tools</h3>
+<ul>
+<li><a href="https://www.webpagetest.org/">WebPageTest</a></li>
+<li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a></li>
+<li><a href="https://www.npmjs.com/package/webpack-bundle-analyzer">webpack-bundle-analyzer</a></li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h2>JavaScript Performance</h2>
+
+</section>
+
+        
+          <section >
+  <h3>Bundle size</h3>
+<ul>
+<li>Uglification</li>
+<li>Minification</li>
+<li>Tree-shaking</li>
+<li>Package choices</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>Requests</h3>
+<ul>
+<li><code>async</code> - don’t interrupt rendering</li>
+<li><code>defer</code> - load after page load finishes</li>
+<li>bundle vs splitting vs modular loading</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>Code</h3>
+<ul>
+<li>Avoid memory leaks</li>
+<li>Scope variables locally</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h2>Images</h2>
+
+</section>
+
+        
+          <section >
+  <h3>Compression</h3>
+<ul>
+<li>ImageOptim: <a href="https://www.npmjs.com/package/imageoptim">npm</a> | <a href="https://imageoptim.com/versions.html">desktop</a> | <a href="https://imageoptim.com/online">web app</a></li>
+<li>SVGO: <a href="https://github.com/svg/svgo">npm</a> | <a href="https://github.com/svg/svgo#other-ways-to-use-svgo">desktop</a> | <a href="https://jakearchibald.github.io/svgomg/">web app</a></li>
+<li>imagemin: <a href="https://github.com/imagemin/imagemin">npm</a></li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>CDNs</h3>
+<ul>
+<li><a href="https://cloudinary.com/">Cloudinary</a></li>
+<li><a href="https://fastly.com">Fastly</a></li>
+<li><a href="https://imagekit.io/">ImageKit</a></li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>Formats</h3>
+<ul>
+<li>SVG for vector shapes</li>
+<li>PNG for raster + transparency</li>
+<li>JPG for raster</li>
+<li><a href="https://developers.google.com/speed/webp">WEBP</a> &amp; <a href="https://web.dev/compress-images-avif/">AVIF</a> for next-gen raster compression</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>Format Switching</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/avif&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.avif&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/webp&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.webp&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.jpg&quot;</span>
+    <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A forest full of trees in fall&quot;</span>
+  /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+</code></pre>
+
+</section>
+
+        
+          <section >
+  <h3>Responsive Sizing</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+  <span class="hljs-attr">srcset</span>=<span class="hljs-string">&quot;trees-lg.jpg 2000w,
+          trees-sm.jpg 500w&quot;</span>
+  <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;(max-width: 500px) 500px,
+         2000px&quot;</span>
+  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees-full.jpg&quot;</span>
+  <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A forest full of trees in fall&quot;</span>
+/&gt;</span>
+</code></pre>
+
+</section>
+
+        
+          <section >
+  <h3>CDN + Responsive</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">source</span>
+    <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/avif&quot;</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.com/f_avif/trees.jpg&quot;</span>
+  /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+    <span class="hljs-attr">srcset</span>=<span class="hljs-string">&quot;https://cdn.com/w_2000/trees.jpg 2000w,
+            https://cdn.com/w_500/trees.jpg 500w&quot;</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.com/trees.jpg&quot;</span>
+    <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A forest full of trees in fall&quot;</span>
+  /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+</code></pre>
+
+</section>
+
+        
+          <section >
+  <h2>CSS</h2>
+
+</section>
+
+        
+          <section >
+  <h2>File Size</h2>
+<ul>
+<li>Minification</li>
+<li>Optimization:<br>
+<code>0px</code> ➡ <code>0</code><br>
+<code>rgb(200,175,20)</code> ➡ <code>#C8AF14</code></li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>PostCSS Tools</h3>
+<ul>
+<li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
+<li><a href="https://github.com/ben-eb/cssnano">cssnano</a></li>
+</ul>
+
+</section>
+
+        
+          <section >
+  
+</section>
+
+        
+          <section >
+  <h2>Resources</h2>
 
 </section>
 
@@ -94,7 +326,7 @@ semantic level, we…</em></p>
           </svg>
         </div>
 
-        <a href="https://jdsteinbach.com/mobile-forms/#/" class="colophon__link">jds.li/mobile-forms</a>
+        <a href="https://jdsteinbach.com/webperf-101/#/" class="colophon__link">jds.li/webperf-101</a>
       </footer>
     </div>
 

@@ -60,11 +60,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   display: block;
   font-family: Recursive, Helvetica, sans-serif;
   font-size: 1.6em;
-  border-bottom: 0.15em solid currentColor;
 }
 .reveal section h1 em, .reveal section h2 em, .reveal section h3 em, .reveal section h4 em, .reveal section h5 em, .reveal section h6 em {
   font-style: italic;
-  border-bottom: 0.125em solid currentColor;
 }
 @supports (font-variation-settings: initial) {
   .reveal section h1 em, .reveal section h2 em, .reveal section h3 em, .reveal section h4 em, .reveal section h5 em, .reveal section h6 em {
