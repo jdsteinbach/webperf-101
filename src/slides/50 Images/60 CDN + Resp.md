@@ -4,7 +4,7 @@
 <picture>
   <source
     type="image/avif"
-    src="https://cdn.com/f_avif/trees.jpg"
+    src="https://cdn.com/trees.avif"
   />
   <img
     srcset="https://cdn.com/w_2000/trees.jpg 2000w,
