@@ -89,7 +89,7 @@
 <li>JS</li>
 <li>Images</li>
 <li>CSS</li>
-<li>(Server settings)</li>
+<li>~Server settings~</li>
 </ul>
 
 </section>
@@ -126,12 +126,17 @@
 </section>
 
         
-          <section data-background-image="images/webpagetest.png">
+          <section data-background-image="images/webpagetest.png" data-background-position="top center">
   
 </section>
 
         
-          <section data-background-image="images/lighthouse.png">
+          <section data-background-image="images/lighthouse.png" data-background-position="top center">
+  
+</section>
+
+        
+          <section data-background-image="images/webpack-bundle-analyzer.png" data-background-position="top center">
   
 </section>
 
@@ -150,6 +155,51 @@
 <li>Tree-shaking</li>
 <li>Package choices</li>
 </ul>
+
+</section>
+
+        
+          <section >
+  <h4>Uglification</h4>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;axios&#x27;</span>);
+<span class="hljs-keyword">const</span> userID = <span class="hljs-number">127</span>;
+<span class="hljs-keyword">const</span> getUserData = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">userID</span>) </span>{
+  <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">&#x27;/user/&#x27;</span> + userID);
+}
+</code></pre>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> a=<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;axios&quot;</span>),b=<span class="hljs-number">127</span>,c=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{<span class="hljs-keyword">return</span>
+a.get(<span class="hljs-string">&quot;/user/&quot;</span>+e)}
+</code></pre>
+
+</section>
+
+        
+          <section >
+  <h4>Minification</h4>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;axios&#x27;</span>);
+<span class="hljs-keyword">const</span> userID = <span class="hljs-number">127</span>;
+
+<span class="hljs-keyword">const</span> getUserData = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">userID</span>) </span>{
+  <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">&#x27;/user/&#x27;</span> + userID);
+}
+</code></pre>
+<pre><code class="hljs language-js"><span class="hljs-keyword">const</span> axios=<span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;axios&#x27;</span>);<span class="hljs-keyword">const</span> userID=<span class="hljs-number">127</span>;<span class="hljs-keyword">const</span>
+getUserData=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">userID</span>)</span>{<span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">&#x27;/user/&#x27;</span>
++userID)};
+</code></pre>
+
+</section>
+
+        
+          <section >
+  <h4>Tree-Shaking</h4>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { AppBar, Button, Link, Menu } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core&#x27;</span>;
+</code></pre>
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> AppBar <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/AppBar&#x27;</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/Button&#x27;</span>;
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/Link&#x27;</span>;
+<span class="hljs-keyword">import</span> Menu <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/Menu&#x27;</span>;
+</code></pre>
 
 </section>
 
@@ -265,6 +315,24 @@
 
         
           <section >
+  <h2>Fonts</h2>
+
+</section>
+
+        
+          <section >
+  <h3>Subsetting</h3>
+
+</section>
+
+        
+          <section >
+  <h3>Loading</h3>
+
+</section>
+
+        
+          <section >
   <h2>CSS</h2>
 
 </section>
@@ -287,6 +355,31 @@
 <ul>
 <li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
 <li><a href="https://github.com/ben-eb/cssnano">cssnano</a></li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h2>HTML</h2>
+<ul>
+<li>Minification</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h2>Server</h2>
+
+</section>
+
+        
+          <section >
+  <h3>Compression</h3>
+<ul>
+<li>Server compresses files; browser expands them.</li>
+<li>gzip / brotli</li>
 </ul>
 
 </section>
