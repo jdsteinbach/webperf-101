@@ -3,4 +3,4 @@
 * JS
 * Images
 * CSS
-* (Server settings)
+* ~Server settings~
