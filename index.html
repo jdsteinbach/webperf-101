@@ -126,17 +126,17 @@
 </section>
 
         
-          <section data-background-image="images/webpagetest.png" data-background-position="top center">
+          <section data-background-image="images/webpagetest.png" data-background-position="top center" data-background-size="contain">
   
 </section>
 
         
-          <section data-background-image="images/lighthouse.png" data-background-position="top center">
+          <section data-background-image="images/lighthouse.png" data-background-position="top center" data-background-size="contain">
   
 </section>
 
         
-          <section data-background-image="images/webpack-bundle-analyzer.png" data-background-position="top center">
+          <section data-background-image="images/webpack-bundle-analyzer.png" data-background-position="top center" data-background-size="contain">
   
 </section>
 
@@ -287,8 +287,20 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
           trees-sm.jpg 500w&quot;</span>
   <span class="hljs-attr">sizes</span>=<span class="hljs-string">&quot;(max-width: 500px) 500px,
          2000px&quot;</span>
-  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees-full.jpg&quot;</span>
+  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.jpg&quot;</span>
   <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A forest full of trees in fall&quot;</span>
+/&gt;</span>
+</code></pre>
+
+</section>
+
+        
+          <section >
+  <h3>Lazy-Loading</h3>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+  <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.jpg&quot;</span>
+  <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A forest full of trees in fall&quot;</span>
+  <span class="hljs-attr">loading</span>=<span class="hljs-string">&quot;lazy&quot;</span>
 /&gt;</span>
 </code></pre>
 
@@ -307,6 +319,7 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
             https://cdn.com/w_500/trees.jpg 500w&quot;</span>
     <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.com/trees.jpg&quot;</span>
     <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A forest full of trees in fall&quot;</span>
+    <span class="hljs-attr">loading</span>=<span class="hljs-string">&quot;lazy&quot;</span>
   /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
 </code></pre>
@@ -322,12 +335,22 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
         
           <section >
   <h3>Subsetting</h3>
+<ul>
+<li>Remove characters not in use</li>
+<li><a href="https://www.filamentgroup.com/lab/glyphhanger/">glyphhanger</a></li>
+</ul>
 
 </section>
 
         
           <section >
   <h3>Loading</h3>
+<ul>
+<li><code>woff2</code> / <code>woff</code> format</li>
+<li><code>font-display: swap</code></li>
+<li>Self-hosted when possible</li>
+<li><a href="https://www.zachleat.com/web/comprehensive-webfonts/">Zach’s Comprehensive Guide</a></li>
+</ul>
 
 </section>
 
@@ -364,6 +387,7 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
   <h2>HTML</h2>
 <ul>
 <li>Minification</li>
+<li><code>preload</code> / <code>prefetch</code></li>
 </ul>
 
 </section>
