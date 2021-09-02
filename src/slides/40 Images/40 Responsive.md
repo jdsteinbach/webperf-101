@@ -6,7 +6,7 @@
           trees-sm.jpg 500w"
   sizes="(max-width: 500px) 500px,
          2000px"
-  src="trees-full.jpg"
+  src="trees.jpg"
   alt="A forest full of trees in fall"
 />
 ```
