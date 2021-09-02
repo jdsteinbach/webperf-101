@@ -11,6 +11,7 @@
             https://cdn.com/w_500/trees.jpg 500w"
     src="https://cdn.com/trees.jpg"
     alt="A forest full of trees in fall"
+    loading="lazy"
   />
 </picture>
 ```

@@ -1,3 +1,4 @@
 ## HTML
 
 * Minification
+* `preload` / `prefetch`
