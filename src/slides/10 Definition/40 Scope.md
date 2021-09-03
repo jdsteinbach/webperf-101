@@ -2,5 +2,6 @@
 
 * JS
 * Images
+* Fonts
 * CSS
-* ~Server settings~
+* (HTML / Server)
