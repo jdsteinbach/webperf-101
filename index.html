@@ -365,7 +365,8 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
 <ul>
 <li><code>woff2</code> / <code>woff</code> format</li>
 <li><code>font-display: swap</code></li>
-<li>Self-hosted when possible</li>
+<li>Self-hosted when possible<br>
+(<a href="https://google-webfonts-helper.herokuapp.com/">google-webfonts-helper</a>)</li>
 <li><a href="https://www.zachleat.com/web/comprehensive-webfonts/">Zach’s Comprehensive Guide</a></li>
 </ul>
 
@@ -404,6 +405,7 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
   <h3>“Critical” CSS</h3>
 <ul>
 <li>Isolate just enough CSS to style above the fold*</li>
+<li>Inline that critical CSS</li>
 <li>Lazy load the full stylesheet</li>
 </ul>
 <pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>
@@ -418,7 +420,8 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
   <h2>HTML</h2>
 <ul>
 <li>Minification</li>
-<li><code>preload</code> / <code>prefetch</code></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload"><code>preload</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/dns-prefetch"><code>prefetch</code></a></li>
 </ul>
 
 </section>
