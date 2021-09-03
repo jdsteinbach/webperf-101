@@ -88,8 +88,9 @@
 <ul>
 <li>JS</li>
 <li>Images</li>
+<li>Fonts</li>
 <li>CSS</li>
-<li>~Server settings~</li>
+<li>(HTML / Server)</li>
 </ul>
 
 </section>
@@ -102,14 +103,23 @@
 
         
           <section >
-  <h3>Metrics</h3>
+  <h3>Older Metrics</h3>
 <ul>
 <li>Total bytes</li>
 <li>Page load time</li>
 <li>Speed index</li>
 <li>Render time</li>
+</ul>
+
+</section>
+
+        
+          <section >
+  <h3>Newer Metrics</h3>
+<ul>
 <li>First meaningful/contentful paint</li>
-<li>Layout shift</li>
+<li>Largest meaningful/contentful paint</li>
+<li>Cumulative layout shift</li>
 </ul>
 
 </section>
@@ -193,13 +203,21 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
         
           <section >
   <h4>Tree-Shaking</h4>
-<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { AppBar, Button, Link, Menu } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core&#x27;</span>;
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> _ <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;lodash&#x27;</span>;
 </code></pre>
-<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> AppBar <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/AppBar&#x27;</span>;
-<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/Button&#x27;</span>;
-<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/Link&#x27;</span>;
-<span class="hljs-keyword">import</span> Menu <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;material-ui/core/Menu&#x27;</span>;
+<pre><code class="hljs language-js"><span class="hljs-keyword">import</span> { sortedUniqBy } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;lodash&#x27;</span>;
 </code></pre>
+
+</section>
+
+        
+          <section >
+  <h3>Package Choices</h3>
+<ul>
+<li><code>moment</code>: ~72kb (minified &amp; gzipped)</li>
+<li><code>date-fns</code>: ~20kb (minified &amp; gzipped)</li>
+<li>Find alternatives with <a href="https://bundlephobia.com">bundlephobia</a></li>
+</ul>
 
 </section>
 
@@ -269,7 +287,6 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
   <h3>Format Switching</h3>
 <pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/avif&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.avif&quot;</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;image/webp&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.webp&quot;</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">img</span>
     <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;trees.jpg&quot;</span>
     <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A forest full of trees in fall&quot;</span>
@@ -384,6 +401,20 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
 
         
           <section >
+  <h3>“Critical” CSS</h3>
+<ul>
+<li>Isolate just enough CSS to style above the fold*</li>
+<li>Lazy load the full stylesheet</li>
+</ul>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>
+      <span class="hljs-attr">media</span>=<span class="hljs-string">&quot;print&quot;</span> <span class="hljs-attr">onload</span>=<span class="hljs-string">&quot;this.media=&#x27;all&#x27;&quot;</span> /&gt;</span>
+</code></pre>
+<p><em>* There is no fold…</em></p>
+
+</section>
+
+        
+          <section >
   <h2>HTML</h2>
 <ul>
 <li>Minification</li>
@@ -410,12 +441,16 @@ getUserData=<span class="hljs-function"><span class="hljs-keyword">function</spa
 
         
           <section >
-  
-</section>
-
-        
-          <section >
   <h2>Resources</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance">MDN Performance Guides</a></li>
+<li>Calibre <a href="https://calibreapp.com/blog/category/web-performance">blog</a> &amp; <a href="https://calibreapp.com/newsletter">newsletter</a></li>
+<li>Smashing Magazine <a href="https://www.smashingmagazine.com/guides/performance/">Performance Checklist</a></li>
+<li>Lara Hogan’s <a href="https://larahogan.me/performance/">performance resources</a></li>
+<li><a href="https://web.dev/fast/">web.dev guides</a></li>
+<li><a href="https://www.webpagetest.org/">WebPageTest</a></li>
+<li>Harry Roberts: <a href="https://csswizardry.com/">CSS Wizardry</a></li>
+</ul>
 
 </section>
 
