@@ -27,6 +27,6 @@
     "sass": "^1.26.10"
   },
   "dependencies": {
-    "reveal.js": "^3.9.2"
+    "reveal.js": "^4.3.0"
   }
 }
